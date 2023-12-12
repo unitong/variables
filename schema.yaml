@@ -1,0 +1,30 @@
+openapi: 3.0.3
+info:
+  title: OpenAPI schema for template variables
+components:
+  schemas:
+    variables:
+      type: object
+      required:
+      - test_options
+      properties:
+        test_options:
+          title: Test Options
+          type: array
+          description: Testing options list and no default value
+          items:
+            type: string
+          x-walrus-ui:
+            colSpan: 12
+            order: 1
+        instance_iam_role_policies:
+          title: Instance Iam Role Policies
+          type: object
+          description: IAM policies to attach to the IAM role
+          default: {}
+          nullable: true
+          additionalProperties:
+            type: string
+          x-walrus-ui:
+            colSpan: 12
+            order: 2
