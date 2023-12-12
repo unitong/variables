@@ -6,9 +6,7 @@ variable "test_options" {
 variable "instance_iam_role_policies" {
   description = "IAM policies to attach to the IAM role"
   type        = map(string)
-  default     = {
-                  test: map123
-                }
+  default     = {}
 }
 
 variable "test_tuple" {
