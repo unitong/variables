@@ -13,13 +13,15 @@ variable "instance_iam_role_policies" {
 
 variable "test_tuple" {
   description = "Testing tuple"
-  type        = tuple(string)
+  type        = tuple([string, number, bool])
+  default     = ("hello", 42, true)
 }
 
 
 variable "test_set" {
   description = "Testing tuple"
   type        = set(string)
+  default     = ["apple", "banana", "orange"]
 }
 
 output "test_options_output" {
