@@ -21,7 +21,8 @@ components:
           title: Instance Iam Role Policies
           type: object
           description: IAM policies to attach to the IAM role
-          default: {}
+          default: 
+             - test: 123
           nullable: true
           additionalProperties:
             type: string
