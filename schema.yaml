@@ -12,20 +12,29 @@ components:
           title: Test Options
           type: array
           description: Testing options list and no default value
+          default:
+          - apple
+          - banana
           items:
             type: string
+          nullable: true
           x-walrus-ui:
             colSpan: 12
+            group: Basic
             order: 1
         instance_iam_role_policies:
           title: Instance Iam Role Policies
           type: object
           description: IAM policies to attach to the IAM role
-          default: 
-             test: 123
+          default:
+            test: 123
           nullable: true
           additionalProperties:
             type: string
           x-walrus-ui:
             colSpan: 12
+            group: Basic
             order: 2
+      x-walrus-ui:
+        groupOrder:
+        - Basic
