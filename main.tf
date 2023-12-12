@@ -10,6 +10,12 @@ variable "instance_iam_role_policies" {
   default     = {}
 }
 
+variable "test_object" {
+  type        = object
+  defautl     = {
+      test: object
+  }
+}
 
 output "test_options_output" {
   value       = var.test_options
